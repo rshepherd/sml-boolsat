@@ -12,11 +12,11 @@ fun simplifynegation str =
     then simplifynegation (String.substring(str,2,String.size(str)-2))
     else str;
 
-(* Takes a list of lists and flattens it into one list. *)
+(* Takes a list of lists and flattens it into one list *)
 fun flatten ( [] ) = [] 
     | flatten ( h::t ) = h @ flatten ( t ) ;
 
-(* Takes and removes an element from a list. *)
+(* Takes and removes an element from a list *)
 fun delete ( del, [] ) = [] 
     | delete ( del, h::t ) = 
         if del = h 
